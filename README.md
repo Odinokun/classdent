@@ -4,6 +4,7 @@
     <li>"npm i" - install package from package.json</li>
     <li>"bower i" - install package from bower.json</li>
 </ol>
+<h5>app folder structura</h5>
 <pre>
     app/
     |- bower
@@ -30,7 +31,7 @@
     |
     |- js
     |
-    |- scss
+    |- sass
     |  |- base                  # шрифты, переменные, миксины
     |  |  |- _fonts.scss
     |  |  |- _variables.scss
