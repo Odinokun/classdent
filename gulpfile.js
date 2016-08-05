@@ -1,21 +1,26 @@
 "use strict"; // подсказки в консоли при ошибках
 
 const gulp          = require('gulp');
-const notify        = require("gulp-notify");  // Нотификатор;
+
+const notify        = require("gulp-notify");  // уведомления всплывающие и в консоли;
+
+const concat        = require('gulp-concat');  // конкатенации файлов
 const fileinclude   = require('gulp-file-include'); //работа с инклюдами
 
+
 gulp.task('html', function() {
-    gulp.src('html/*.html')
+    gulp.src('app/html/*.html')
         .pipe(fileinclude({
                 prefix: '@@',
                 basepath: '@file'
             }))
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('app/'))
 
         .pipe(notify('Update HTML!'));
 });
 
-gulp.task('watch', ['build'], function() {
-    gulp.watch('include/*html', ['build']);
-    gulp.watch('html/*html', ['build']);
-});
+//gulp.task('watch', ['build'], function() {
+//    gulp.watch('include/*.html', ['build']);
+//    gulp.watch('html/*.html', ['build']);
+//
+//});

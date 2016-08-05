@@ -1,5 +1,34 @@
-@@include('base/head.html')
-@@include('base/header.html')
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Odinokun</title>
+    <meta name="title" content="Odinokun">
+    <meta name="description" content="Odinokun">
+    <meta name="author" content="Odinokun">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css css/vendors.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 9]>
+    <p class="browsehappy">Ваш браузер <strong>сильно устарел</strong>. Пожалуйста<a href="http://browsehappy.com/">обновите</a> его.</p>
+<![endif]-->
+<div class="wrapper">
+    <!-- BEGIN #header  -->
+    <header class="header">
+        <div class="container">
+        </div>
+    </header>
+    <!-- END #header -->
     <!-- BEGIN #content  -->
     <div class="content">
         <!-- begin #first-section -->
@@ -11,4 +40,21 @@
         <!-- end #first-section -->
     </div>
     <!-- END #content -->
-@@include('base/footer.html')
+    <!-- BEGIN #footer  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__copyright">&#169; Copyright Odinokun 2016</div>
+        </div>
+    </footer>
+    <!-- END #footer -->
+</div>
+
+<!-- build:js js/vendors.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js js/common.js -->
+<!-- endbuild -->
+</body>
+</html>
+
