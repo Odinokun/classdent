@@ -5,50 +5,50 @@
     <li>"bower i" - install package from bower.json</li>
 </ol>
 <pre>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Типографские правила
-|   …                    # и т.д.
-|
-|– components/
-|   |– _buttons.scss     # Кнопки
-|   |– _carousel.scss    # Карусель
-|   |– _cover.scss       # Обложка
-|   |– _dropdown.scss    # Выпадающий список
-|   …                    # и т.д.
-|
-|– layout/
-|   |– _navigation.scss  # Навигация
-|   |– _grid.scss        # Сетка
-|   |– _header.scss      # Шапка
-|   |– _footer.scss      # Подвал
-|   |– _sidebar.scss     # Боковая панель
-|   |– _forms.scss       # Формы
-|   …                    # и т.д.
-|
-|– pages/
-|   |– _home.scss        # Стили, особые для главной страницы
-|   |– _contact.scss     # Стили, особые для страницы контактов
-|   …                    # и т.д.
-|
-|– themes/
-|   |– _theme.scss       # Тема по умолчанию
-|   |– _admin.scss       # Тема админа
-|   …                    # и т.д.
-|
-|– utils/
-|   |– _variables.scss   # Переменные Sass
-|   |– _functions.scss   # Функции Sass
-|   |– _mixins.scss      # Примеси Sass
-|   |– _helpers.scss     # Помощники классов & placeholder’ов
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   …                    # и т.д.
-|
-|
-`– main.scss             # главный файл Sass
+    app/
+    |- bower
+    |
+    |- css
+    |
+    |- fonts
+    |
+    |- html
+    |  |- include               # подключаемые фрагменты (svg, maps)
+    |  |  |- some-svg.html
+    |  |  |- google-map.html
+    |  |  …                     # и т.д.
+    |  |
+    |  |- components            # основные повторяющиеся элементы
+    |  |  |- _head.html
+    |  |  |- _header.html
+    |  |  |- _footer.html
+    |  |  …                     # и т.д.
+    |  |
+    |  |- index.html            # скелеты страниц
+    |
+    |- img
+    |
+    |- js
+    |
+    |- scss
+    |  |- base                  # шрифты, переменные, миксины
+    |  |  |- _fonts.scss
+    |  |  |- _variables.scss
+    |  |  |- _mixin.scss
+    |  |  |- _base.scss
+    |  |  …                     # и т.д.
+    |  |
+    |  |- components            # стили элементов
+    |  |  |- _header.scss
+    |  |  |- _footer.scss
+    |  |  …                     # и т.д.
+    |  |
+    |  |- pages                 # стили страниц
+    |  |  |- _index.scss
+    |  |  |- _about.scss
+    |  |  …                     # и т.д.
+    |  |
+    |  |- main.scss             # главный файл Scss
+    |
+    |- index.html
 </pre>
