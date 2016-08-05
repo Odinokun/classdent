@@ -4,7 +4,7 @@
     <li>"npm i" - install package from package.json</li>
     <li>"bower i" - install package from bower.json</li>
 </ol>
-
+<pre>
 sass/
 |
 |– base/
@@ -51,3 +51,4 @@ sass/
 |
 |
 `– main.scss             # главный файл Sass
+</pre>
