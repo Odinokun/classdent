@@ -22,7 +22,7 @@
         height: 24px;
         margin: auto;
         content: '';
-        background: url('../../img/header__top--item.png') no-repeat;
+        background: url('../img/header__top--item.png') no-repeat;
     }
     &.adress {
         width: 45%;
@@ -68,7 +68,7 @@
 // ===== header__middle =====
 .header__middle {
     padding: 10px 0;
-    background: url('../../img/header__middle-bg.jpg') 50% 0;
+    background: url('../img/header__middle-bg.jpg') 50% 0;
     .container {
         font-size: 0;
         line-height: 1px;
@@ -114,12 +114,12 @@
             width: 58px;
             height: 64px;
             margin: auto;
-            background: url('../../img/header__middle-bank.png') 0 0 no-repeat;
+            background: url('../img/header__middle-bank.png') 0 0 no-repeat;
         }
     }
     &.phone {
         padding-left: 70px;
-        background: url('../../img/header__middle-phone.png') 0 50% no-repeat;
+        background: url('../img/header__middle-phone.png') 0 50% no-repeat;
         a {
             transition: .5s;
             text-decoration: none;
@@ -134,5 +134,311 @@
             }
         }
     }
+}
+
+// ===== header__bottom =====
+.header__bottom {
+    background-color: #fff;
+}
+.header__bottom--navigation,
+.header__bottom--search {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+// ===== nav =====
+#hmenu,
+#hmenu ul,
+#hmenu ul li,
+#hmenu ul li a,
+#hmenu #menu-button {
+    line-height: 1;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+}
+#hmenu:after,
+#hmenu > ul:after {
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '.';
+}
+#hmenu #menu-button {
+    display: none;
+}
+#hmenu {
+    display: inline-block;
+    vertical-align: middle;
+}
+#hmenu > ul > li {
+    float: left;
+}
+#hmenu.align-center > ul {
+    font-size: 0;
+    text-align: center;
+}
+#hmenu.align-center > ul > li {
+    display: inline-block;
+    float: none;
+}
+#hmenu.align-center ul ul {
+    text-align: left;
+}
+#hmenu.align-right > ul > li {
+    float: right;
+}
+#hmenu.align-right ul ul {
+    text-align: right;
+}
+#hmenu > ul > li > a {
+    font-size: 14px;
+    padding: 20px 15px;
+    transition: color .2s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+    // @include opensans(bold);
+}
+#hmenu > ul > li:hover > a,
+#hmenu > ul > li.active > a {
+    // color: $brand-light;
+    color: #f00;//temp
+}
+#hmenu > ul > li.parent > a {
+    padding-right: 25px;
+}
+#hmenu > ul > li.parent > a::after {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    content: '';
+    transition: border-color .2s ease;
+    transform: rotate(45deg);
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+#hmenu > ul > li:hover.parent > a::after,
+#hmenu > ul > li.active.parent > a::after {
+    border-right: 1px solid #f00; //temp
+    border-bottom: 1px solid #f00; //temp
+    // border-right: 1px solid $brand-light;
+    // border-bottom: 1px solid $brand-light;
+}
+#hmenu > ul > li.parent:hover > a::after {
+    // border-color: $brand-light;
+    border-color: #f00; //temp
+}
+#hmenu ul ul {
+    position: absolute;
+    left: -9999px;
+}
+#hmenu li > ul {
+    border-top: 2px solid transparent;
+}
+#hmenu li:hover > ul {
+    left: auto;
+    // border-top: 2px solid $brand-light;
+    border-top: 2px solid #f00; //temp
+}
+#hmenu.align-right li:hover > ul {
+    right: 0;
+}
+#hmenu ul ul ul {
+    top: 0;
+    margin-left: 100%;
+}
+#hmenu.align-right ul ul ul {
+    margin-right: 100%;
+    margin-left: 0;
+}
+#hmenu ul ul li {
+    height: 0;
+    transition: height .2s ease;
+}
+#hmenu ul li:hover > ul > li {
+    height: 32px;
+}
+#hmenu ul ul li a {
+    font-size: 14px;
+    width: 190px;
+    padding: 10px 20px;
+    transition: color .2s ease;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    // color: $text-dark;
+    color: #f00;//temp
+    background: #fff;
+
+    @include opensans(bold);
+}
+#hmenu ul ul li:hover > a,
+#hmenu ul ul li a:hover {
+    // color: $brand-light;
+    color: #f00;//temp
+}
+
+@media only screen and (max-width: 768px) {
+    // .header {
+    //     position: relative;
+    //     background-color: $brand-dark !important;
+    //     .container {
+    //         padding: 0;
+    //     }
+    // }
+    // .header__logo {
+    //     position: absolute;
+    //     z-index: 10;
+    //     top: 15px;
+    //     left: 30px;
+    // }
+    // .header__logo-pic {
+    //     max-height: 30px;
+    // }
+    #hmenu {
+        width: 100%;
+    }
+    #hmenu ul {
+        display: none;
+        width: 100%;
+    }
+    #hmenu li > ul {
+        border-top: none;
+    }
+    #hmenu li:hover > ul {
+        border-top: none;
+    }
+    #hmenu.align-center > ul,
+    #hmenu.align-right ul ul {
+        text-align: left;
+    }
+    #hmenu ul li,
+    #hmenu ul ul li,
+    #hmenu ul li:hover > ul > li {
+        width: 100%;
+        height: auto;
+        border-top: 1px solid rgba(120, 120, 120, .15);
+    }
+    #hmenu ul li a,
+    #hmenu ul ul li a {
+        width: 100%;
+        text-align: center;
+    }
+    #hmenu > ul > li,
+    #hmenu.align-center > ul > li,
+    #hmenu.align-right > ul > li {
+        display: block;
+        float: none;
+    }
+    #hmenu ul ul li a {
+        font-size: 14px;
+        padding: 20px 20px 20px 15px;
+    }
+    #hmenu ul ul li:hover > a,
+    #hmenu ul ul li a:hover {
+        color: #f00;//temp
+        // color: $brand-light;
+    }
+    #hmenu ul ul,
+    #hmenu ul ul ul {
+        position: relative;
+        right: auto;
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+    #hmenu > ul > li.parent > a::after,
+    #hmenu ul ul li.parent > a::after {
+        display: none;
+    }
+    #menu-line {
+        display: none;
+    }
+    #hmenu #menu-button {
+        font-size: 12px;
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: transparent;
+        img {
+            display: block;
+        }
+    }
+    #hmenu #menu-button::after {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        width: 15px;
+        height: 2px;
+        content: '';
+        background: #fff;
+    }
+    #hmenu #menu-button::before {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        display: block;
+        width: 15px;
+        height: 7px;
+        content: '';
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+    #hmenu .submenu-button {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+        border-left: 1px solid rgba(120, 120, 120, .15);
+    }
+    #hmenu .submenu-button::after {
+        position: absolute;
+        z-index: 99;
+        top: 21px;
+        left: 26px;
+        display: block;
+        width: 1px;
+        height: 11px;
+        content: '';
+        background: #fff;
+    }
+    #hmenu .submenu-button::before {
+        position: absolute;
+        z-index: 99;
+        top: 26px;
+        left: 21px;
+        display: block;
+        width: 11px;
+        height: 1px;
+        content: '';
+        background: #fff;
+    }
+    #hmenu .submenu-button.submenu-opened:after {
+        display: none;
+    }
+}
+
+
+
+
+.search__form {
+    display: none; /// temp
 }
 /*===== /header =====*/
