@@ -1,14 +1,24 @@
-@mixin helvetica($style : roman) {
-    @if $style == roman {
-        font-family: 'HelveticaRoman';
+@mixin opensans($style : regular) {
+    @if $style == regular {
+        font-family: 'OpenSans';
     }
 
-    @if $style == medium {
-        font-family: 'HelveticaMedium';
+    @if $style == bold {
+        font-family: 'OpenSansBold';
     }
 
-    @if $style == light {
-        font-family: 'HelveticaLight';
+    @if $style == semibold {
+        font-family: 'OpenSansSemiBold';
+    }
+}
+
+@mixin sheepsans($style : regular) {
+    @if $style == regular {
+        font-family: 'SheepSans';
+    }
+
+    @if $style == bold {
+        font-family: 'SheepSansBold';
     }
 }
 
@@ -37,4 +47,21 @@
     &:-ms-input-placeholder {
         color: $color;
     }
+}
+
+
+// ===== calculate to Rem =====
+@function calculateRem($size) {
+  $remSize: $size / 14px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
 }

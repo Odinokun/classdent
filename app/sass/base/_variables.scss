@@ -1,8 +1,10 @@
-//***** colors
+// ===== colors =====
+$brand: #106634;            // dark green
 
-$brand-dark: #022f53;  //темно синий
-$brand-light: #27cbf4; //неоновый
+// ===== text colors =====
+$t-brand-dark: #1a964c;     // dark green
+$t-brand-light: #44b376;    // light green
+$t-highlight: #2fc758;      // highlight green
 
-$text-dark: #0f273a;
-$text-default: #6a6a6a;
-$text-light: #959595;
+$t-default: #696969;        // light grey
+$t-dark: #3f3f3f;           // dark grey
