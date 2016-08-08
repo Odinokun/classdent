@@ -1,0 +1,14 @@
+/*===== index-top-slogan =====*/
+.slogan {
+    padding-left: 200px;
+    background-color: #ccc;
+    @include clearfix;
+    img {
+        float: left;
+        margin: 0 40px -40px 0;
+    }
+}
+.slogan__title {
+    color: #1a964b;
+}
+/*===== /index-top-slogan =====*/

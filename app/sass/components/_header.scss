@@ -3,7 +3,7 @@
 // ===== header__top =====
 .header__top {
     padding: 8px 0 10px 0;
-    background-color: $brand;
+    background-color: #106634;
 }
 .header__top--item {
     position: relative;
@@ -35,7 +35,7 @@
             color: #fff;
             &:hover {
                 transition: .5s;
-                color: $t-highlight;
+                color: #2fc758;
             }
         }
     }
@@ -59,7 +59,7 @@
             color: #fff;
             &:hover {
                 transition: .5s;
-                color: $t-highlight;
+                color: #2fc758;
             }
         }
     }
@@ -190,7 +190,7 @@
     height: 3px;
     transition: all .25s ease-out;
     // background: #009ae1;
-    background: $t-highlight;
+    background: #2fc758;
 }
 #hmenu > ul > li {
     float: left;
@@ -220,7 +220,7 @@
     // text-transform: uppercase;
 
     // color: #000;
-    color: $t-dark;
+    color: #3f3f3f;
     // font-size: 18px;
 
     @include font-size(18px);
@@ -229,10 +229,10 @@
 #hmenu > ul > li.active > a {
     transition: color .5s ease;
     // color: #00afff;
-    color: $t-highlight;
+    color: #2fc758;
 }
 #hmenu > ul > li.parent:hover {
-    background: $brand;
+    background: #106634;
 }
 #hmenu > ul > li.parent > a {
     padding-right: 35px;
@@ -250,7 +250,7 @@
     border-bottom: 1px solid #000;
 }
 #hmenu > ul > li.parent:hover > a::after {
-    border-color: $t-highlight;
+    border-color: #2fc758;
     // border-color: #009ae1;
 }
 #hmenu ul ul {
@@ -268,7 +268,7 @@
         display: block;
         height: 1px;
         content: '';
-        background-color: $t-highlight;
+        background-color: #2fc758;
     }
     &:last-child::after {
         display: none;
@@ -305,7 +305,7 @@
     color: #fff;
     // border-bottom: 1px solid $t-highlight;
     // color: #000;
-    background: $brand;
+    background: #106634;
 
     @include font-size(18px);
     // background: #fff;
@@ -313,7 +313,7 @@
 #hmenu ul ul li:hover > a,
 #hmenu ul ul li a:hover {
     // color: #00afff;
-    color: $t-highlight;
+    color: #2fc758;
     // background-color: rgba(0,0,0,.4);
 }
 #hmenu ul ul li.parent > a::after {
@@ -337,7 +337,7 @@
 }
 #hmenu ul ul li.parent:hover > a::after {
     // border-color: #00afff;
-    border-color: $t-highlight;
+    border-color: #2fc758;
 }
 // @media only screen and (max-width: 768px) {
 @media only screen and (max-width: 1120px) {
@@ -466,7 +466,7 @@
 
 
 .header__bottom--search-btn {
-    background: $t-brand-dark;
+    background: #1a964c;
     outline: none;
     box-shadow: none;
     border: none;
@@ -474,7 +474,7 @@
     transition: .3s;
     margin-left: 10px;
     &:hover {
-        background: $t-highlight;
+        background: #2fc758;
         transition: .3s;
     }
 }
