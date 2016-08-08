@@ -1,7 +1,7 @@
 /*===== index-top-slogan =====*/
 .slogan {
     padding-left: 200px;
-    background-color: #ccc;
+
     @include clearfix;
     img {
         float: left;
@@ -9,6 +9,12 @@
     }
 }
 .slogan__title {
+    padding: 20px 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     color: #1a964b;
+
+    @include font-size(30px);
+    @include sheepsans(bold);
 }
 /*===== /index-top-slogan =====*/
