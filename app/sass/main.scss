@@ -1,12 +1,12 @@
 // base
-@import 'base/_fonts.scss';
-@import 'base/_variables.scss';
-@import 'base/_mixins.scss';
-@import 'base/_base.scss';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/base';
 
 // components
-@import 'components/_header.scss';
-@import 'components/_footer.scss';
+@import 'components/header';
+@import 'components/footer';
 
 // pages
-@import 'pages/_index.scss';
+@import 'pages/index-top-slider';

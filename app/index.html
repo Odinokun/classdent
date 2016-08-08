@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- build:css css/vendors.css -->
     <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower/bxslider-4/dist/jquery.bxslider.css">
     <!-- endbuild -->
     <!-- build:css css/main.css -->
     <link rel="stylesheet" href="css/main.css">
@@ -60,23 +61,27 @@
                 <div class="header__bottom--navigation">
                     <div id='hmenu'>
                         <ul>
-                            <li class='active parent'><a href='https://www.google.com.ua'>Компания</a>
+                            <li class=''><a href='https://www.google.com.ua'>Главная</a></li>
+                            <!-- <li class='active'><a href='https://www.google.com.ua'>Главная</a></li> -->
+                            <li class='parent'><a href='https://www.google.com.ua'>О клинике</a>
                                 <ul>
-                                    <li><a href='#'>Отзывы</a></li>
-                                    <li><a href='#'>Блог</a></li>
-                                    <li><a href='#'>Партнерам</a></li>
-                                    <li><a href='#'>Сайт бесплатно</a></li>
+                                    <li><a href='#'>История</a></li>
+                                    <li><a href='#'>Наши врачи</a></li>
+                                    <li><a href='#'>Новости клиники</a></li>
                                 </ul>
                             </li>
                             <li class='parent'><a href='https://www.google.com.ua'>Услуги</a>
                                 <ul>
-                                    <li><a href='#'>Услуга</a></li>
-                                    <li><a href='#'>Супер Услуга</a></li>
-                                    <li><a href='#'>Мега Супер Услуга</a></li>
+                                    <li><a href='#'>Отбеливание</a></li>
+                                    <li><a href='#'>Пломбирование</a></li>
+                                    <li><a href='#'>Протезирование</a></li>
                                 </ul>
                             </li>
-                            <li><a href='#'>Портфолио</a></li>
-                            <li><a href='#footer__info'>Контакты</a></li>
+                            <li><a href='#'>Цены</a></li>
+                            <li class="active"><a href='#'>Рекомендации</a></li>
+                            <!-- <li><a href='#'>Рекомендации</a></li> -->
+                            <li><a href='#'>Фотогалерея</a></li>
+                            <li><a href='#'>Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -98,18 +103,44 @@
             </div>
         </nav>
         <!-- end #navigation -->
-        <div class="temp" style="height: 5000px; background-color: pink;"></div>
     </header>
     <!-- end #header -->
 
     <!-- BEGIN #content  -->
     <div class="content">
-        <!-- begin #first-section -->
-        <section class="first-section">
+        <!-- begin #top-slider -->
+        <section class="top-slider">
             <div class="container">
+            <ul id="top-slider">
+                <li>
+                    <div class="top-slider__item">
+                        <h2 class="top-slider__title">Детская стоматология</h2>
+                        <p>Многие родители задают врачам вопрос о том, надо ли водить ребенка к стоматологу, если он боится, а молочные зубы и так скоро выпадут. Ответ может быть лишь один: молочные зубы требуют обязательного лечения, а дети должны посещать стоматолога даже чаще, чем взрослые, так как молочные зубки имеют меньший размер и более тонкую эмаль.</p>
+                        <div class="top-slider__link">
+                            <a href="#">подробнее</a>
+                        </div>
+                    </div>
+                    <div class="top-slider__item img">
+                        <img src="img/baby.png" alt="baby">
+                    </div>
+
+                </li>
+                <li>
+                    <div class="top-slider__item img">
+                        <img src="img/baby.png" alt="baby">
+                    </div>
+                    <div class="top-slider__item">
+                        <h2 class="top-slider__title">Недетская стоматология :)</h2>
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Сих речью выйти, о обеспечивает агенство то ipsum несколько эта продолжил лучше ее безопасную но правилами букв, ты вопроса рукопись. Раз он всеми текста, послушавшись свое рекламных имени текстов это силуэт. Собрал семантика ее сбить, заглавных правилами грамматики,  силуэт дороге.</p>
+                        <div class="top-slider__link">
+                            <a href="#">подробнее</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
             </div>
         </section>
-        <!-- end #first-section -->
+        <!-- end #top-slider -->
     </div>
     <!-- END #content -->
     <!-- BEGIN #footer  -->
@@ -124,19 +155,14 @@
 <!-- build:js js/vendors.js -->
 <!-- bower:js -->
 <script src='bower/jquery/dist/jquery.min.js'></script>
+<script src='bower/bxslider-4/dist/jquery.bxslider.js'></script>
+<script src='bower/bxslider-4/dist/vendor/jquery.easing.1.3.js'></script>
 <!-- endbower -->
 <!-- endbuild -->
 <!-- build:js js/common.js -->
+<script src='js/hmenu.js'></script>
+<script src='js/sticky-header.js'></script>
 <script src='js/common.js'></script>
 <!-- endbuild -->
-<script>
-$(function() {
-    $('.header__bottom').stickMe({
-        shadow: false,
-        transitionStyle: 'slide'
-    });
-});
-</script>
 </body>
 </html>
-

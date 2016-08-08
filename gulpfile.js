@@ -70,7 +70,7 @@ gulp.task('browser-sync', function() { // создаем таск browser-sync
 
 
 // ============ очистка папки DIST перед боевой сборкой ============
-gulp.task('clean', function() {
+gulp.task('clean', ['img'], function() {
   return del('dist'); // удаляем папку dist перед сборкой
 });
 
@@ -79,7 +79,6 @@ gulp.task('clean', function() {
 gulp.task('watch', ['browser-sync', 'html', 'sass'], function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);         // sass
   gulp.watch('app/js/**/*.js', browserSync.reload);   // js
-  gulp.watch('app/img/**/*', ['img']);                // images
   gulp.watch('app/html/**/*.html', ['html']);         // изменения в исходниках html
   gulp.watch('app/*.html', browserSync.reload);       // изменения в собранном html
 });

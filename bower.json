@@ -18,5 +18,8 @@
   "dependencies": {
     "normalize-css": "normalize.css#^4.2.0",
     "jquery": "2.1.4"
+  },
+  "devDependencies": {
+    "bxslider-4": "^4.2.5"
   }
 }
