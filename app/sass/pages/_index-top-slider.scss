@@ -13,10 +13,10 @@
         padding: 0 70px;
     }
     .bx-wrapper {
+        margin: 0 auto;
         border: none;
         background-color: transparent;
         box-shadow: none;
-        margin: 0 auto;
     }
     .bx-wrapper .bx-controls-direction a {
         width: 40px;
@@ -24,13 +24,13 @@
         margin-top: -25px;
     }
     .bx-wrapper .bx-prev {
-        background: url('../img/bx/top-slider-arr.png') 0 0 no-repeat;
+        background: url('../img/bx/top-slider-arr.png') 0 -77px no-repeat;
         &:hover {
             background-position: 0 0;
         }
     }
     .bx-wrapper .bx-next {
-        background: url('../img/bx/top-slider-arr.png') 100% 0 no-repeat;
+        background: url('../img/bx/top-slider-arr.png') 100% -77px no-repeat;
         &:hover {
             background-position: 100% 0;
         }
@@ -71,11 +71,12 @@
 }
 .top-slider__link {
     a {
-        letter-spacing: .9px;
-        margin-top: 30px;
         display: inline-block;
+        margin-top: 30px;
         padding: 7px 35px;
+        transition: .3s;
         text-decoration: none;
+        letter-spacing: .9px;
         text-transform: uppercase;
         color: #fff;
         border: 2px solid #ff7734;
@@ -83,6 +84,10 @@
 
         @include font-size(18px);
         @include sheepsans(bold);
+        &:hover {
+            transition: .3s;
+            background-color: #ff7734;
+        }
     }
 }
 /*===== /index-top-slider =====*/

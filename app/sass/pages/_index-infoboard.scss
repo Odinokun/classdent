@@ -1,0 +1,26 @@
+/*===== index-infoboard =====*/
+.infoboard {
+    .container {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background: url('../img/header__middle-bg.jpg') 50% 0 no-repeat;
+    }
+}
+.infoboard__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    color: #fff;
+    &.left {
+        width: 27%;
+    }
+    &.middle {
+        width: 27%;
+        background: #106634;
+    }
+    &.right {
+        width: 45%;
+
+    }
+}
+/*===== /index-infoboard =====*/

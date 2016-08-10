@@ -11,6 +11,7 @@ const uglify        = require('gulp-uglify');         // минификация 
 
 const imagemin      = require('gulp-imagemin');       // минификация img
 const pngquant      = require('gulp-pngquant');       // минификация png
+const svgmin        = require('gulp-svgmin');         // минификация svg
 
 const del           = require('del');                 // удаление файлов/директорий
 const browserSync   = require('browser-sync');        // виртуальный сервер
@@ -47,8 +48,20 @@ gulp.task('sass', function() {
 });
 
 
+// ============ обработка SVG ============
+gulp.task('svg', function () {
+    return gulp.src('app/img/svg/**/*.svg')
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        .pipe(gulp.dest('app/img/svg'))
+});
+
+
 // ============ обработка фоточек ============
-gulp.task('img', function() {
+gulp.task('img', ['svg'], function() {
   return gulp.src('app/img/**/*') // берем все изображения из app
     .pipe(cache(imagemin({ // сжимаем их с наилучшими настройками с учетом кеширования
       interlaced: true, progressive: true,
@@ -76,7 +89,7 @@ gulp.task('clean', ['img'], function() {
 
 
 // ============ слежение за изменениями в файлах ============
-gulp.task('watch', ['browser-sync', 'html', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'html', 'sass', 'img'], function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);         // sass
   gulp.watch('app/js/**/*.js', browserSync.reload);   // js
   gulp.watch('app/html/**/*.html', ['html']);         // изменения в исходниках html
