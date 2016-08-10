@@ -42,7 +42,10 @@
     width: 49.5%;
     padding: 20px 30px;
     vertical-align: middle;
+    p {
     color: #fff;
+
+    }
     &.img {
         height: 100%;
         padding: 0;
@@ -57,6 +60,7 @@
     position: relative;
     letter-spacing: 2.4px;
     text-transform: uppercase;
+    color: #fff;
 
     @include font-size(48px);
     @include sheepsans(bold);
