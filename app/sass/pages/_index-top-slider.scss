@@ -73,18 +73,18 @@
         background-color: #fff;
     }
 }
-.top-slider__link {
+.btn {
     a {
         display: inline-block;
         margin-top: 30px;
-        padding: 7px 35px;
+        padding: 3px 35px;
         transition: .3s;
         text-decoration: none;
         letter-spacing: .9px;
         text-transform: uppercase;
         color: #fff;
         border: 2px solid #ff7734;
-        border-radius: 20px;
+        border-radius: 40px;
 
         @include font-size(18px);
         @include sheepsans(bold);

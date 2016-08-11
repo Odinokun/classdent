@@ -7,14 +7,14 @@ $(function() {
 // ===== bx slider in top section =====
 $(function() {
     $('#top-slider').bxSlider({
-          mode: 'fade',
-          // auto: true,
-          pager: false
+        mode: 'fade',
+        pager: false
     });
 })
 
 
 // ===== Выравнивание высоты фона у infoboard__item =====
+// === при загрузке ===
 $(function() {
     jQuery(function($){
         var max_col_height = 0;
@@ -25,4 +25,24 @@ $(function() {
         });
         $('.infoboard__item').height(max_col_height);
     });
+});
+
+// === при ресайзе ===
+$(function() {
+    var columns = $('.infoboard__item');
+    $(window).resize(function () {
+        setEqualHeight(columns);
+    });
+
+    function setEqualHeight(columns) {
+        var tallestcolumn = 0;
+        columns.css('height', '');
+        columns.each(function() {
+            currentHeight = $(this).height();
+            if(currentHeight > tallestcolumn) {
+                tallestcolumn = currentHeight;
+            }
+        });
+        columns.height(tallestcolumn);
+    }
 });
