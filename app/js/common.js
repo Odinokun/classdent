@@ -13,6 +13,15 @@ $(function() {
 })
 
 
+// ===== bx slider in review section =====
+$(function() {
+    $('#review__slider').bxSlider({
+        mode: 'fade',
+        pager: false
+    });
+})
+
+
 // ===== Выравнивание высоты фона у infoboard__item =====
 // === при загрузке ===
 $(function() {
