@@ -1,0 +1,53 @@
+/*===== index-teeth =====*/
+.teeth {
+    padding: 40px 0;
+    text-align: center;
+    background: url('../img/teeth-bg.jpg');
+}
+.teeth__item {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin: 0 10px;
+    padding: 15px 0;
+    vertical-align: top;
+    border-radius: 60px;
+    &:hover {
+        .teeth__circle {
+            transition: .3s;
+            border: 10px solid #ff7734;
+        }
+    }
+    a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+.teeth__circle {
+    position: relative;
+    width: 122px;
+    height: 122px;
+    margin: 0 auto 55px;
+    transition: .3s;
+    border: 10px solid #148954;
+    border-radius: 50%;
+    background-color: #fafafa;
+    img {
+        position: absolute;
+        top: 15px;
+        left: -50px;
+        max-height: 150px;
+    }
+}
+.teeth__name {
+    text-transform: uppercase;
+    color: #17753b;
+
+    @include opensans(semibold);
+    @include font-size(16px);
+    @include line-height(20px);
+}
+/*===== /index-teeth =====*/

@@ -162,6 +162,28 @@ a {
     }
 }
 
+// ===== red button =====
+.btn {
+    a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 3px 35px;
+        transition: .3s;
+        text-decoration: none;
+        letter-spacing: .9px;
+        text-transform: uppercase;
+        color: #fff;
+        border: 2px solid #ff7734;
+        border-radius: 40px;
+
+        @include font-size(18px);
+        @include sheepsans(bold);
+        &:hover {
+            transition: .3s;
+            background-color: #ff7734;
+        }
+    }
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
