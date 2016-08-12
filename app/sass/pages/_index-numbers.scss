@@ -1,0 +1,62 @@
+/*===== index-numbers =====*/
+.numbers {
+    padding: 20px 0;
+    text-align: center;
+    background: url('../img/numbers-bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+}
+.numbers__header {
+    padding: 20px 0;
+}
+.numbers__header--title {
+    color: #fff;
+
+    @include sheepsans(bold);
+    @include font-size(30px);
+}
+.numbers__item {
+    display: inline-block;
+    width: 19%;
+    padding: 20px 0;
+    vertical-align: top;
+}
+.numbers__item--square {
+    position: relative;
+    overflow: hidden;
+    width: 152px;
+    height: 152px;
+    margin: 0 auto 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.numbers__item--square-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .2;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, .51);
+}
+.numbers__item--icon {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto 10px;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.numbers__item--numeral {
+    color: #fff;
+
+    @include sheepsans(bold);
+    @include font-size(30px);
+}
+.numbers__item--text {
+    color: #fff;
+
+    @include line-height(18px);
+}
+/*===== /index-numbers =====*/
