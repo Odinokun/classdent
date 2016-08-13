@@ -1,3 +1,4 @@
+/*===== index-review =====*/
 .review {
     padding: 20px 0;
     text-align: center;
@@ -13,7 +14,6 @@
 }
 
 //===== slider =====
-//общие стили для верхнего слайдера
 .review {
     .container {
         max-width: 1000px;
@@ -23,10 +23,16 @@
         padding: 0;
     }
     li {
+        max-width: 940px;
         padding: 20px 70px;
+        color: #6b6b6b;
+
+        @include line-height(24px);
+        @include font-size(18px);
+    }
+    .bx-viewport {
         border: 1px solid #ececec;
         border-radius: 20px;
-        max-width: 940px;
     }
     .bx-wrapper {
         margin: 10px auto;

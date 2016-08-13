@@ -410,12 +410,43 @@
                 <li>Подзаголовок точках страну переписали предупредила снова, коварный переулка имени, злых агенство текст, переписывается языкового! Мир решила, рекламных единственное всеми даже? <span class="review__slider--name">Петрович</span></li>
                 <li>Предупреждал по всей, своих lorem злых залетают рот вдали однажды страна маленький. Путь, текстов дорогу парадигматическая алфавит переписывается путь, букв коварный. <span class="review__slider--name">Гадя</span></li>
                 <li>Путь составитель послушавшись взгляд продолжил текста текстами имени агенство свою, себя своего то. Заглавных своих, переулка всемогущая жизни предложения своих. <span class="review__slider--name">Серега</span></li>
-                <li>Диких запятой коварный ручеек мир. Снова большой эта, единственное они города даже рыбного скатился дороге последний. Родного, последний лучше что.</li>
+                <li>Диких запятой коварный ручеек мир. Снова большой эта, единственное они города даже рыбного скатился дороге последний. Родного, последний лучше что. <span class="review__slider--name">Банан</span></li>
             </ul>
         </div>
     </section>
     <!-- end #review -->
-    <div class="temp" style="background-color: pink; height: 500px;"></div>
+    <!-- begin #salenews -->
+    <section class="salenews">
+        <div class="container">
+            <header class="review__header">
+                <h2 class="review__header--title">Новости и акции</h2>
+                <a href="#">Все новости</a>
+            </header>
+            <div class="salenews__item">
+                <div class="salenews__pic">
+                    <img src="img/salenews.jpg" alt="pic">
+                </div>
+                <div class="salenews__text">
+                    <div class="salenews__text--date">21 июня 2016</div>
+                    <div class="salenews__text--title">График работы в период новогодних праздников</div>
+                    <div class="salenews__text--article">На самом современном оборудовании, производства знаменитой немецкой фирмы KaVo, в нашей клинике проведут качественную диагностику (с применением современного радиовизиографа «KODAK-2200»</div>
+                </div>
+                <a href="#"></a>
+            </div>
+            <div class="salenews__item">
+                <div class="salenews__pic">
+                    <img src="img/salenews.jpg" alt="pic">
+                </div>
+                <div class="salenews__text">
+                    <div class="salenews__text--date">21 июня 2016</div>
+                    <div class="salenews__text--title">График работы в период новогодних праздников</div>
+                    <div class="salenews__text--article">На самом современном оборудовании, производства знаменитой немецкой фирмы KaVo, в нашей клинике проведут качественную диагностику (с применением современного радиовизиографа «KODAK-2200»</div>
+                </div>
+                <a href="#"></a>
+            </div>
+        </div>
+    </section>
+    <!-- end #salenews -->
 </div>
 <!-- END #content -->
     <!-- BEGIN #footer  -->
@@ -430,6 +461,7 @@
                 </div>
             </div>
         </div>
+        <div class="footer__map" id="footer__map"></div>
         <div class="container">
             <div class="footer__copyright">&#169; Стоматологическая клиника «КласДент»</div>
             <div class="footer__copyright">Сделано в ProShift</div>
@@ -450,5 +482,90 @@
 <script src='js/sticky-header.js'></script>
 <script src='js/common.js'></script>
 <!-- endbuild -->
+<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+<script>
+google.maps.event.addDomListener(window, 'load', init);
+var map;
+
+function init() {
+    var mapOptions = {
+        center: new google.maps.LatLng(59.9065, 30.321349),
+        zoom: 10,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.DEFAULT,
+        },
+        disableDoubleClickZoom: true,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        },
+        scaleControl: true,
+        scrollwheel: false,
+        panControl: true,
+        streetViewControl: true,
+        draggable: true,
+        overviewMapControl: true,
+        overviewMapControlOptions: {
+            opened: false,
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [{"featureType":"landscape","stylers":[{"hue":"#FFA800"},{"saturation":0},{"lightness":0},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#53FF00"},{"saturation":-73},{"lightness":40},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FBFF00"},{"saturation":0},{"lightness":0},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#00FFFD"},{"saturation":0},{"lightness":30},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#00BFFF"},{"saturation":6},{"lightness":8},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#679714"},{"saturation":33.4},{"lightness":-25.4},{"gamma":1}]}],
+    }
+    var mapElement = document.getElementById('footer__map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var marker = new google.maps.Marker({
+        // Определяем позицию маркера
+            position: {lat: 59.9065, lng: 30.321349},
+        // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+        map: map,
+        // Пишем название маркера - появится если навести на него курсор и немного подождать
+        // title: 'Наш маркер: Большой театр',
+        // icon: 'img/location.png'
+    });
+    var locations = [
+
+    ];
+    for (i = 0; i < locations.length; i++) {
+        if (locations[i][1] == 'undefined') {
+            description = '';
+        } else {
+            description = locations[i][1];
+        }
+        if (locations[i][2] == 'undefined') {
+            telephone = '';
+        } else {
+            telephone = locations[i][2];
+        }
+        if (locations[i][3] == 'undefined') {
+            email = '';
+        } else {
+            email = locations[i][3];
+        }
+        if (locations[i][4] == 'undefined') {
+            web = '';
+        } else {
+            web = locations[i][4];
+        }
+        if (locations[i][7] == 'undefined') {
+            markericon = '';
+        } else {
+            markericon = locations[i][7];
+        }
+        marker = new google.maps.Marker({
+            icon: markericon,
+            position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+            map: map,
+            title: locations[i][0],
+            desc: description,
+            tel: telephone,
+            email: email,
+            web: web
+        });
+        link = '';
+    }
+}
+</script>
+
 </body>
 </html>
