@@ -34,7 +34,7 @@
 }
 
 // ===== placeholder color =====
-@mixin placecolor($color: #fff) {
+@mixin placecolor($color: #5f5f5f) {
     &::-webkit-input-placeholder {
         color: $color;
     }

@@ -93,17 +93,19 @@
                         </div>
                     </div>
                     <div class="header__bottom--search">
-                        <button class="header__bottom--search-btn">
+                        <button class="header__bottom--search-btn" id="header__bottom--search-btn">
                             <svg viewBox="0 0 412.338 412.338">
                                 <g>
                                     <path d="M404.275,362.88L299.188,257.794c-3.585-3.601-8.12-5.869-12.924-6.974   c18.176-25.67,28.962-56.924,28.962-90.715c0-86.911-70.694-157.613-157.613-157.613C70.702,2.491,0,73.186,0,160.104   c0,86.903,70.702,157.605,157.613,157.605c36.075,0,69.239-12.355,95.82-32.848c1.236,4.324,3.438,8.429,6.836,11.835   l105.102,105.094c5.202,5.202,12.103,8.055,19.46,8.055s14.258-2.861,19.452-8.055c5.202-5.202,8.064-12.112,8.055-19.476   C412.33,374.967,409.469,368.066,404.275,362.88z M16.249,160.096c0-77.945,63.411-141.356,141.356-141.356   c77.937,0,141.348,63.411,141.348,141.356c0,37.383-14.705,71.328-38.481,96.641c-0.114,0.098-0.228,0.138-0.35,0.228   c-0.163,0.171-0.203,0.39-0.366,0.545c-25.751,26.995-61.98,43.919-102.136,43.919C79.668,301.444,16.249,238.025,16.249,160.096z    M392.781,390.289c-4.251,4.259-11.664,4.251-15.916,0L271.763,285.203c-4.381-4.389-4.381-11.534,0-15.924   c2.13-2.13,4.958-3.3,7.966-3.3s5.828,1.179,7.958,3.3L392.789,374.39c2.122,2.122,3.284,4.934,3.284,7.942   C396.081,385.331,394.911,388.168,392.781,390.289z" />
                                 </g>
                             </svg>
                         </button>
-                        <form action="" class="search__form">
-                            <input type="text" placeholder="поиск по сайту" class="search__input">
-                            <input type="submit" class="search__submit">
-                        </form>
+                        <div class="search__form-wrap" id="search__form-wrap">
+                            <form action="" class="search__form">
+                                <input type="text" placeholder="поиск по сайту" class="search__input">
+                                <input type="submit" class="search__submit">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -468,6 +470,7 @@
     </div>
 </footer>
 <!-- END #footer -->
+<div class="arrow-up" id="arrow-up">вверх</div>
 </div>
 <!-- build:js js/vendors.js -->
 <!-- bower:js -->
@@ -509,73 +512,7 @@ function init() {
             opened: false,
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: [{
-            "featureType": "landscape",
-            "stylers": [{
-                "hue": "#FFA800"
-            }, {
-                "saturation": 0
-            }, {
-                "lightness": 0
-            }, {
-                "gamma": 1
-            }]
-        }, {
-            "featureType": "road.highway",
-            "stylers": [{
-                "hue": "#53FF00"
-            }, {
-                "saturation": -73
-            }, {
-                "lightness": 40
-            }, {
-                "gamma": 1
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "stylers": [{
-                "hue": "#FBFF00"
-            }, {
-                "saturation": 0
-            }, {
-                "lightness": 0
-            }, {
-                "gamma": 1
-            }]
-        }, {
-            "featureType": "road.local",
-            "stylers": [{
-                "hue": "#00FFFD"
-            }, {
-                "saturation": 0
-            }, {
-                "lightness": 30
-            }, {
-                "gamma": 1
-            }]
-        }, {
-            "featureType": "water",
-            "stylers": [{
-                "hue": "#00BFFF"
-            }, {
-                "saturation": 6
-            }, {
-                "lightness": 8
-            }, {
-                "gamma": 1
-            }]
-        }, {
-            "featureType": "poi",
-            "stylers": [{
-                "hue": "#679714"
-            }, {
-                "saturation": 33.4
-            }, {
-                "lightness": -25.4
-            }, {
-                "gamma": 1
-            }]
-        }],
+        styles: [{"featureType":"administrative.neighborhood","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#ff0000"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
     }
     var mapElement = document.getElementById('footer__map');
     var map = new google.maps.Map(mapElement, mapOptions);
@@ -585,9 +522,7 @@ function init() {
             lat: 59.897701,
             lng: 30.421775
         },
-        // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
         map: map,
-        // Пишем название маркера - появится если навести на него курсор и немного подождать
         // title: 'Наш маркер: Большой театр',
         // icon: 'img/location.png'
     });

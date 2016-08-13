@@ -4,6 +4,13 @@ $(function() {
 });
 
 
+// ===== search form visible =====
+$('#header__bottom--search-btn').click(function() {
+    var search = document.getElementById('search__form-wrap');
+    $(search).toggleClass('active');
+});
+
+
 // ===== bx slider in top section =====
 $(function() {
     $('#top-slider').bxSlider({
@@ -52,5 +59,26 @@ $(function() {
             }
         });
         columns.height(tallestcolumn);
+    }
+});
+
+
+//===== arrow up =====
+$(function() {
+    $('#arrow-up').click(function() {
+        $('html, body').animate({scrollTop: 0},1000);
+        return false;
+    })
+});
+
+$(function() {
+    window.onscroll = function() {
+        var arrow = document.getElementById('arrow-up');
+        if(window.pageYOffset > 500){
+            $(arrow).addClass('active');
+        }
+        else{
+            $(arrow).removeClass('active');
+        }
     }
 });

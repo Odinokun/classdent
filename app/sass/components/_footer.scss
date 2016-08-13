@@ -61,6 +61,45 @@
     @include font-size(12px);
 }
 
+// ===== arrow-up =====
+.arrow-up {
+    line-height: 30px;
+    position: fixed;
+    z-index: 10;
+    bottom: 50px;
+    left: -100px;
+    width: 100px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .5s;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    background-color: #106634;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        display: block;
+        width: 18px;
+        height: 30px;
+        content: '';
+        background: url('../img/arr-up.png') 0 9px no-repeat;
+    }
+}
+.arrow-up.active {
+    left: -65px;
+    transition: .5s;
+    &:hover {
+        left: 0;
+        transition: .7s;
+        &::after {
+            background-position: 0 -15px;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1140px) {
     .footer__social--item a {
