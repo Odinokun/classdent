@@ -193,3 +193,12 @@ a {
         animation: none !important;
     }
 }
+
+
+@media only screen and (max-width : 425px) {
+    .btn {
+        a {
+            @include font-size(14px);
+        }
+    }
+}

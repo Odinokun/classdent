@@ -1,7 +1,7 @@
 /*===== index-informblocks =====*/
 .informblocks__item {
     display: inline-block;
-    width: 24.7%;
+    width: 24.6%;
     margin-top: 20px;
     padding: 0 15px 20px 15px;
     text-align: center;
@@ -23,5 +23,13 @@
 
     @include sheepsans(bold);
     @include font-size(16px);
+    @include line-height(20px);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .informblocks {
+        display: none;
+    }
 }
 /*===== /index-informblocks =====*/

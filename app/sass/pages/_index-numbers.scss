@@ -59,4 +59,11 @@
 
     @include line-height(18px);
 }
+
+
+@media only screen and (max-width: 860px) {
+    .numbers {
+        display: none;
+    }
+}
 /*===== /index-numbers =====*/

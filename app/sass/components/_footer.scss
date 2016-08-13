@@ -68,6 +68,7 @@
     }
 }
 
+
 @media only screen and (max-width: 690px) {
     .footer__social--item a {
         &::before {
@@ -76,6 +77,21 @@
         span {
             display: none;
         }
+    }
+    .footer__map {
+        height: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .footer {
+        .container {
+            padding: 0 10px;
+        }
+    }
+    .footer__map {
+        height: 200px;
     }
 }
 /*===== /footer =====*/

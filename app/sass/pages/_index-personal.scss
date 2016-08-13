@@ -101,10 +101,17 @@
         @include font-size(18px);
         @include sheepsans(bold);
         &:hover {
-            color: #fff;
             transition: .3s;
+            color: #fff;
             background-color: #39a444;
         }
+    }
+}
+
+
+@media only screen and (max-width: 860px) {
+    .personal-sec {
+        display: none;
     }
 }
 /*===== /index-personal =====*/

@@ -46,14 +46,14 @@
         margin-top: -15px;
     }
     .bx-wrapper .bx-prev {
-        left: -30px;
+        left: -25px;
         background: url('../img/bx/review-arr.png') 0 0 no-repeat;
         &:hover {
             background-position: 0 -50px;
         }
     }
     .bx-wrapper .bx-next {
-        right: -30px;
+        right: -25px;
         background: url('../img/bx/review-arr.png') 100% 0 no-repeat;
         &:hover {
             background-position: 100% -50px;
@@ -68,5 +68,36 @@
     @include opensans(semibold);
     @include line-height(24px);
     @include font-size(18px);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .review {
+        li {
+            @include line-height(18px);
+            @include font-size(14px);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 610px) {
+    .review {
+        li {
+            padding: 20px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .review {
+        .container {
+            padding: 0 10px;
+        }
+        .bx-wrapper .bx-controls-direction a {
+            display: none;
+        }
+    }
 }
 /*===== /index-review =====*/

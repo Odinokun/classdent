@@ -449,27 +449,26 @@
     <!-- end #salenews -->
 </div>
 <!-- END #content -->
-    <!-- BEGIN #footer  -->
-    <footer class="footer">
-        <div class="footer__social">
-            <div class="container">
-                <div class="footer__social--item vk">
-                    <a href="#"><span>vk.com/klasdent</span></a>
-                </div>
-                <div class="footer__social--item instagram">
-                    <a href="#"><span>instagram.com/klasdent</span></a>
-                </div>
+<!-- BEGIN #footer  -->
+<footer class="footer">
+    <div class="footer__social">
+        <div class="container">
+            <div class="footer__social--item vk">
+                <a href="#"><span>vk.com/klasdent</span></a>
+            </div>
+            <div class="footer__social--item instagram">
+                <a href="#"><span>instagram.com/klasdent</span></a>
             </div>
         </div>
-        <div class="footer__map" id="footer__map"></div>
-        <div class="container">
-            <div class="footer__copyright">&#169; Стоматологическая клиника «КласДент»</div>
-            <div class="footer__copyright">Сделано в ProShift</div>
-        </div>
-    </footer>
-    <!-- END #footer -->
+    </div>
+    <div class="footer__map" id="footer__map"></div>
+    <div class="container">
+        <div class="footer__copyright">&#169; Стоматологическая клиника «КласДент»</div>
+        <div class="footer__copyright">Сделано в ProShift</div>
+    </div>
+</footer>
+<!-- END #footer -->
 </div>
-
 <!-- build:js js/vendors.js -->
 <!-- bower:js -->
 <script src='bower/jquery/dist/jquery.min.js'></script>
@@ -489,8 +488,8 @@ var map;
 
 function init() {
     var mapOptions = {
-        center: new google.maps.LatLng(59.9065, 30.321349),
-        zoom: 10,
+        center: new google.maps.LatLng(59.897701, 30.421775),
+        zoom: 12,
         zoomControl: true,
         zoomControlOptions: {
             style: google.maps.ZoomControlStyle.DEFAULT,
@@ -510,13 +509,82 @@ function init() {
             opened: false,
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: [{"featureType":"landscape","stylers":[{"hue":"#FFA800"},{"saturation":0},{"lightness":0},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#53FF00"},{"saturation":-73},{"lightness":40},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FBFF00"},{"saturation":0},{"lightness":0},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#00FFFD"},{"saturation":0},{"lightness":30},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#00BFFF"},{"saturation":6},{"lightness":8},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#679714"},{"saturation":33.4},{"lightness":-25.4},{"gamma":1}]}],
+        styles: [{
+            "featureType": "landscape",
+            "stylers": [{
+                "hue": "#FFA800"
+            }, {
+                "saturation": 0
+            }, {
+                "lightness": 0
+            }, {
+                "gamma": 1
+            }]
+        }, {
+            "featureType": "road.highway",
+            "stylers": [{
+                "hue": "#53FF00"
+            }, {
+                "saturation": -73
+            }, {
+                "lightness": 40
+            }, {
+                "gamma": 1
+            }]
+        }, {
+            "featureType": "road.arterial",
+            "stylers": [{
+                "hue": "#FBFF00"
+            }, {
+                "saturation": 0
+            }, {
+                "lightness": 0
+            }, {
+                "gamma": 1
+            }]
+        }, {
+            "featureType": "road.local",
+            "stylers": [{
+                "hue": "#00FFFD"
+            }, {
+                "saturation": 0
+            }, {
+                "lightness": 30
+            }, {
+                "gamma": 1
+            }]
+        }, {
+            "featureType": "water",
+            "stylers": [{
+                "hue": "#00BFFF"
+            }, {
+                "saturation": 6
+            }, {
+                "lightness": 8
+            }, {
+                "gamma": 1
+            }]
+        }, {
+            "featureType": "poi",
+            "stylers": [{
+                "hue": "#679714"
+            }, {
+                "saturation": 33.4
+            }, {
+                "lightness": -25.4
+            }, {
+                "gamma": 1
+            }]
+        }],
     }
     var mapElement = document.getElementById('footer__map');
     var map = new google.maps.Map(mapElement, mapOptions);
     var marker = new google.maps.Marker({
         // Определяем позицию маркера
-            position: {lat: 59.9065, lng: 30.321349},
+        position: {
+            lat: 59.897701,
+            lng: 30.421775
+        },
         // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
         map: map,
         // Пишем название маркера - появится если навести на него курсор и немного подождать
@@ -566,6 +634,7 @@ function init() {
     }
 }
 </script>
-
 </body>
+
 </html>
+
