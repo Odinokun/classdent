@@ -1,0 +1,167 @@
+//===== begin #popup_form.css =====
+.formBox {
+    position: relative;
+    padding: 10px 30px;
+    text-align: left;
+}
+.inputBox {
+    margin: 0;
+}
+.inputBox label {
+    display: block;
+    margin: 0 0 5px;
+    color: #898989;
+}
+.inputBox input {
+    font-size: 16px;
+    line-height: 34px;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 10px;
+    letter-spacing: .5px;
+    color: #575757;
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+    background: #fff;
+}
+.inputBox input[type='text']:focus,
+.inputBox input[type='text']:active {
+    border-color: #31b851;
+    outline: none;
+}
+.error input[type='text'] {
+    border-color: #ed1b24 !important;
+    background: #fbd1d3 !important;
+}
+// ===== / form =====
+
+// ===== popup =====
+.layerBox {
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,134,2,.6);
+}
+.popupBox {
+    position: fixed;
+    z-index: 25000;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 540px;
+    height: 490px;
+    margin: -245px 0 0 -270px;
+    color: #676767;
+    border: 2px solid #31b851;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,.7);
+}
+.popupInn {
+    padding: 80px 15px 28px 15px;
+    text-align: center;
+}
+
+.top_block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+    background: url('../img/popup-calendar.png') 45px 15px no-repeat;
+    h2 {
+        font-size: 24px;
+        line-height: 100px;
+        text-transform: uppercase;
+        color: #106634;
+    }
+    .close_bth {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 45px;
+        height: 45px;
+        background: url('../img/popup-close.png') 50% 50% no-repeat;
+    }
+}
+
+.btnBox {
+    padding: 10px 0;
+    text-align: center;
+    input {
+        font-size: 18px;
+        padding: 5px 35px 3px 35px;
+        transition: .3s;
+        letter-spacing: .9px;
+        text-transform: uppercase;
+        color: #ff7734;
+        border: 2px solid #ff7734;
+        border-radius: 40px;
+        outline: none;
+        background: transparent;
+
+        @include sheepsans(bold);
+        &:hover {
+            transition: .3s;
+            color: #fff;
+            background-color: #ff7734;
+        }
+    }
+}
+.success {
+    height: 260px;
+    margin-top: -130px;
+    padding: 20px 30px;
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: .5px;
+        color: #999;
+    }
+    .btnBox {
+        padding: 15px 0;
+        input {
+            padding: 5px 80px 3px 80px;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 610px) {
+    .formBox {
+        padding: 10px 0;
+    }
+    .popupBox {
+        width: 300px;
+        height: 430px;
+        margin: -210px 0 0 -150px;
+    }
+    .popupInn {
+        padding: 30px 15px;
+    }
+    .top_block {
+        height: 60px;
+        background: none;
+        h2 {
+            font-size: 20px;
+            line-height: 60px;
+        }
+    }
+    .success {
+        height: 200px;
+        margin-top: -100px;
+        padding: 20px 0;
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+}
+// ===== end #popup_form.css =====

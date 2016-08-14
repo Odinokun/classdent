@@ -82,3 +82,26 @@ $(function() {
         }
     }
 });
+
+
+//popup_form
+$(function() {
+    // popup open
+    $('.popupOpen').click( function(e){
+        e.preventDefault();
+
+        $('.feedback, .layerBox').fadeIn();
+        return false;
+    });
+    $('.feedback .btnBox').click( function(){
+        $('.feedback').fadeOut();
+        $('.success').fadeIn();
+        return false;
+    });
+
+    // popup close
+    $('.layerBox, .success .btnBox, .close_bth').click( function(){
+        $('.layerBox, .popupBox').fadeOut();
+        return false;
+    });
+});
