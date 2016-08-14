@@ -1,0 +1,117 @@
+/*===== action =====*/
+.action {
+    padding: 10px 0 30px 0;
+    text-align: center;
+}
+.action__item {
+    display: inline-block;
+    width: 50%;
+    max-width: 480px;
+    margin: 10px 100px 10px 10px;
+    text-align: left;
+    vertical-align: top;
+    &:nth-child(even) {
+        margin-right: 0;
+    }
+    & > header {
+        position: relative;
+        padding: 10px 10px 10px 70px;
+        background: url('../img/action-header.jpg');
+        &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 15px;
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: auto;
+            content: '';
+            background: url('../img/action-calendar.png');
+        }
+    }
+}
+.action__item--header {
+    color: #fff;
+
+    @include opensans(bold);
+    @include font-size(18px);
+    @include line-height(24px);
+}
+.action__item--pic {
+    overflow: hidden;
+    height: 190px;
+    border-right: 1px solid #128d50;
+    border-left: 1px solid #128d50;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.action__item--text {
+    padding: 10px 20px 20px 20px;
+    border: 1px solid #128d50;
+    border-top: none;
+}
+.action__item--title {
+    margin-bottom: 10px;
+    color: #128d50;
+
+    @include opensans(semibold);
+    @include font-size(22px);
+    @include line-height(28px);
+}
+
+
+@media only screen and (max-width : 1140px) {
+    .action__item {
+        margin-right: 20px;
+    }
+}
+
+
+@media only screen and (max-width : 1100px) {
+    .action__item {
+        width: 400px;
+    }
+}
+
+
+@media only screen and (max-width : 940px) {
+    .action__item {
+        width: 70%;
+        margin: 10px;
+        &:nth-child(even) {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 690px) {
+    .action__item {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width : 500px) {
+    .action__item {
+        & > header {
+            padding: 10px 20px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 425px) {
+    .action {
+        .container {
+            padding: 0;
+        }
+    }
+}
+/*===== /action =====*/

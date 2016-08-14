@@ -10,7 +10,7 @@ html {
     height: 100%;
 }
 body {
-    line-height: 1.8;
+    line-height: 1.5;
     width: 100%;
     min-width: 320px;
     height: 100%;
@@ -135,6 +135,23 @@ a {
 
     @include font-size(30px);
     @include sheepsans(bold);
+}
+.content__title {
+    padding: 20px 0 5px 0;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #128d50;
+
+    @include sheepsans(bold);
+    @include font-size(24px);
+    &:after {
+        display: block;
+        width: 170px;
+        height: 1px;
+        margin-bottom: 5px;
+        content: '';
+        background-color: #11a257;
+    }
 }
 
 // ==== breadcrumbs =====
