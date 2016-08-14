@@ -1,0 +1,95 @@
+/*===== 404 =====*/
+.error__page {
+    position: relative;
+    background: url('../img/404-bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+}
+.error__banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+}
+.error__banner--icon {
+    margin-bottom: 20px;
+}
+.error__banner--title,
+.error__banner--subtitle {
+    text-transform: uppercase;
+    color: #fff;
+
+    @include sheepsans(bold);
+}
+.error__banner--title {
+    position: relative;
+
+    @include line-height(140px);
+    @include font-size(120px);
+    & span {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+
+        @include font-size(18px);
+    }
+}
+.error__banner--subtitle {
+    @include font-size(18px);
+    @include line-height(40px);
+}
+.error__banner--link {
+    a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 5px 35px 3px 35px;
+        transition: .3s;
+        text-decoration: none;
+        letter-spacing: .9px;
+        text-transform: uppercase;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 40px;
+
+        @include font-size(18px);
+        @include sheepsans(bold);
+        &:hover {
+            transition: .3s;
+            color: #106634;
+            background-color: #fff;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 425px) {
+    .error__banner {
+        width: 300px;
+        height: 300px;
+    }
+    .error__banner--title {
+        @include line-height(110px);
+        @include font-size(90px);
+        & span {
+            @include font-size(16px);
+        }
+    }
+    .error__banner--subtitle {
+        @include font-size(16px);
+        @include line-height(30px);
+    }
+    .error__banner--link {
+        a {
+            margin-top: 15px;
+
+            @include font-size(16px);
+        }
+    }
+}
+/*===== /404 =====*/
