@@ -177,6 +177,11 @@
 }
 
 // ===== nav =====
+li.disabled a {
+    cursor: default;
+    pointer-events: none;
+    color: #3f3f3f;
+}
 #hmenu,
 #hmenu ul,
 #hmenu ul li,
