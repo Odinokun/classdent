@@ -86,6 +86,7 @@
         right: 5px;
         width: 45px;
         height: 45px;
+        cursor: pointer;
         background: url('../img/popup-close.png') 50% 50% no-repeat;
     }
 }
@@ -96,6 +97,7 @@
     input {
         font-size: 18px;
         padding: 5px 35px 3px 35px;
+        cursor: pointer;
         transition: .3s;
         letter-spacing: .9px;
         text-transform: uppercase;
@@ -128,6 +130,7 @@
         padding: 15px 0;
         input {
             padding: 5px 80px 3px 80px;
+            cursor: pointer;
         }
     }
 }
