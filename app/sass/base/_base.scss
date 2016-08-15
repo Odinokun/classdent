@@ -202,6 +202,10 @@ a {
     }
 }
 
+.lightboxOverlay {
+    z-index: 10000;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
     .animated {

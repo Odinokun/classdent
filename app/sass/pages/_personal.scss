@@ -1,0 +1,77 @@
+/*===== personal =====*/
+.personal {
+    text-align: center;
+}
+.personal__item {
+    position: relative;
+    display: inline-block;
+    width: 270px;
+    margin: 20px 50px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.personal__ava {
+    display: inline-block;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.personal__name {
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #b2b2b2;
+
+    @include sheepsans(bold);
+    @include font-size(20px);
+    @include line-height(24px);
+}
+.personal__position {
+    margin: 10px 0 0 0;
+    color: #44b376;
+
+    @include font-size(18px);
+    @include line-height(24px);
+    &::after {
+        position: relative;
+        top: -5px;
+        display: inline-block;
+        width: 70%;
+        height: 1px;
+        content: '';
+        background-color: #f7f7f7;
+    }
+}
+.personal__experience {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: #b2b2b2;
+
+    @include opensans(bold);
+    @include font-size(14px);
+    @include line-height(20px);
+}
+
+
+@media only screen and (max-width : 1199px) {
+    .personal__item {
+        margin: 20px;
+    }
+}
+
+
+@media only screen and (max-width : 425px) {
+    .personal {
+        .container {
+            padding: 0 10px;
+        }
+    }
+}
+/*===== /personal =====*/
