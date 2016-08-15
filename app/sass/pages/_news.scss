@@ -1,0 +1,128 @@
+/*===== news =====*/
+.news__item {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    margin: 20px 0;
+    padding: 20px 20px 20px 380px;
+    transition: .3s;
+    border: 1px solid #e4e5e4;
+    &:hover {
+        transition: .3s;
+        border: 1px solid #128d50;
+    }
+    & > a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+.news__item--pic {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 360px;
+    height: 100%;
+    margin: auto;
+    img {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+.news__item--date {
+    color: #9b9b9b;
+
+    @include opensans(semibold);
+    @include font-size(18px);
+}
+.news__item--title {
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #128d50;
+
+    @include opensans(semibold);
+    @include font-size(22px);
+    @include line-height(26px);
+}
+.news__item--text {
+    color: #818181;
+
+    @include font-size(14px);
+    @include line-height(18px);
+}
+
+
+// ===== pagination =====
+.pagination {
+    margin: 30px 0 40px 0;
+    padding: 10px 0;
+    text-align: center;
+    background: url('../img/pagination-bg.jpg');
+}
+.pagination__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.pagination__item {
+    display: inline-block;
+    &.active {
+        .pagination__link {
+            transition: .5s;
+            color: #fff;
+            background-color: #128d50;
+        }
+    }
+}
+.pagination__link {
+    display: inline-block;
+    padding: 3px 10px;
+    transition: .5s;
+    text-align: center;
+    text-decoration: none;
+    color: #128d50;
+
+    @include opensans(bold);
+    @include font-size(16px);
+    &:hover {
+        transition: .5s;
+        color: #fff;
+        background-color: #128d50;
+    }
+}
+// ===== /pagination =====
+
+
+@media only screen and (max-width : 820px) {
+    .news__item {
+        padding: 10px 10px 10px 280px;
+    }
+    .news__item--pic {
+        width: 260px;
+    }
+    .news__item--date {
+        @include font-size(14px);
+    }
+    .news__item--title {
+        margin: 5px 0;
+
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+}
+
+
+@media only screen and (max-width : 690px) {
+    .news__item {
+        padding: 20px;
+    }
+    .news__item--pic {
+        display: none;
+    }
+}
+/*===== /news =====*/
