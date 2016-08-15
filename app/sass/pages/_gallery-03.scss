@@ -1,0 +1,41 @@
+/*===== gallery-01 =====*/
+.gallery-03 {
+    @include clearfix;
+}
+.gallery-03__item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 280px;
+    max-height: 185px;
+    margin: 0 10px 30px 10px;
+    transition: .3s;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #e4e5e4;
+    &:hover {
+        transition: .3s;
+        border: 1px solid #128d50;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.gallery-03__text {
+    padding: 10px 25px 25px 25px;
+    text-align: left;
+}
+
+
+@media only screen and (max-width : 610px) {
+    .gallery-03 {
+        .container {
+            padding: 0 10px;
+        }
+    }
+    .gallery-03__text {
+        padding: 10px;
+    }
+}
+/*===== /gallery-01 =====*/

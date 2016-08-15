@@ -105,3 +105,11 @@ $(function() {
         return false;
     });
 });
+
+
+//gallery lightbox
+$(function() {
+    lightbox.option({
+      'wrapAround': true,
+    });
+});

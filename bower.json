@@ -20,6 +20,7 @@
     "jquery": "2.1.4"
   },
   "devDependencies": {
-    "bxslider-4": "^4.2.5"
+    "bxslider-4": "^4.2.5",
+    "lightbox2": "^2.8.2"
   }
 }
