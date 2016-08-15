@@ -1,0 +1,72 @@
+/*===== newsone =====*/
+.newsone {
+    @include clearfix;
+}
+.newsone__item {
+    float: right;
+    width: 70%;
+    padding: 20px;
+}
+.newsone__item--pic {
+    float: left;
+    width: 30%;
+    padding: 15px 10px;
+    img {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.newsone__item--date {
+    color: #9b9b9b;
+
+    @include opensans(semibold);
+    @include font-size(18px);
+}
+.newsone__item--title {
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #128d50;
+
+    @include opensans(semibold);
+    @include font-size(22px);
+    @include line-height(26px);
+}
+.newsone__item--text {
+    color: #818181;
+
+    @include font-size(14px);
+    @include line-height(18px);
+}
+
+
+@media only screen and (max-width : 610px) {
+    .newsone__item {
+        float: none;
+        width: 100%;
+    }
+    .newsone__item--pic {
+        float: none;
+        width: 100%;
+        padding: 0 20px;
+        img {
+            display: inline-block;
+            width: 48%;
+            vertical-align: top;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 425px) {
+    .newsone {
+        .container {
+            padding: 0 10px;
+        }
+    }
+    .newsone__item--pic {
+        img {
+            width: 100%;
+        }
+    }
+}
+/*===== /newsone =====*/
