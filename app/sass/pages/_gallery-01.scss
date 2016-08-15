@@ -7,9 +7,14 @@
     display: inline-block;
     width: 300px;
     margin: 20px 30px;
+    transition: .3s;
     text-align: center;
     vertical-align: top;
-    border: 1px solid #128d50;
+    border: 1px solid #e4e5e4;
+    &:hover {
+        transition: .3s;
+        border: 1px solid #128d50;
+    }
     img {
         display: block;
         width: 100%;
