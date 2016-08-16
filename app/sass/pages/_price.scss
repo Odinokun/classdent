@@ -1,0 +1,138 @@
+/*===== price =====*/
+.price__menu {
+    position: relative;
+    width: 340px;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+.price__menu--item {
+    list-style: none;
+    cursor: pointer;
+    a {
+        display: inline-block;
+        padding: 8px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #454545;
+
+        @include opensans(semibold);
+        @include font-size(14px);
+    }
+    &.active {
+        background-color: #2daf46;
+        a {
+            color: #fff;
+        }
+        .price__submenu {
+            left: 100%;
+            visibility: visible;
+            transition: .5s linear;
+            opacity: 1;
+        }
+    }
+}
+.price__submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    visibility: hidden;
+    width: 700px;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    transition: .5s linear;
+    opacity: 0;
+    border: 1px solid #a6a6a6;
+    background-color: #fff;
+    tr:first-child {
+        color: #fff;
+        background-color: #106634;
+    }
+    tr:nth-child(n+2):nth-child(odd) {
+        background-color: #ededec;
+        td {
+            padding: 8px 40px;
+        }
+    }
+    th {
+        padding: 8px 40px;
+        text-transform: uppercase;
+        color: #fff;
+
+        @include opensans(semibold);
+        @include font-size(14px);
+    }
+    td {
+        padding: 15px 40px;
+        text-transform: none;
+        color: #565656;
+
+        @include font-size(16px);
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .price__menu {
+        width: 700px;
+    }
+    .price__menu--item {
+        padding-left: 0;
+        &.active {
+            .price__submenu {
+                position: relative;
+                top: 0;
+                left: 0;
+                transition: 0s;
+            }
+        }
+    }
+    .price__submenu {
+        top: 0;
+        left: 0;
+        margin-bottom: 0;
+        transition: 0s;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .price__menu {
+        width: 100%;
+    }
+    .price__menu--item {
+        a {
+            padding: 8px 20px;
+        }
+    }
+    .price__submenu {
+        width: 100%;
+        td {
+            padding: 8px 40px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 690px) {
+    .price {
+        .container {
+            padding: 0 10px;
+        }
+    }
+    .price__submenu {
+        tr:nth-child(n+2):nth-child(odd) {
+            td {
+                padding: 8px 20px;
+            }
+        }
+        th {
+            padding: 8px 20px;
+        }
+        td {
+            padding: 8px 20px;
+
+            @include font-size(14px);
+        }
+    }
+}
+/*===== /price =====*/

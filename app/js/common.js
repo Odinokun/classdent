@@ -113,3 +113,24 @@ $(function() {
       'wrapAround': true,
     });
 });
+
+
+// add class active in price
+$('.price__menu--item').click(function(e) {
+    e.preventDefault();
+    $('.price__menu--item').removeClass('active');
+    $(this).addClass('active');
+});
+
+
+// выравнивание высоты прайса
+$(function() {
+    var max_col_height = 0;
+    $('.price__submenu').each(function(){
+        if ($(this).height() > max_col_height) {
+            max_col_height = $(this).height();
+        }
+    });
+    console.log(max_col_height);
+    $(".price__menu").css({'min-height' : max_col_height});
+});

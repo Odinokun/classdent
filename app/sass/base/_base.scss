@@ -144,6 +144,7 @@ a {
 
     @include sheepsans(bold);
     @include font-size(24px);
+    @include line-height(28px);
     &:after {
         display: block;
         width: 170px;
