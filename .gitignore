@@ -8,3 +8,6 @@ bower_components/
 ### My files ###
 *.zip
 *.rar
+
+### Php Storm ###
+.idea

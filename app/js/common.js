@@ -93,11 +93,11 @@ $(function() {
         $('.feedback, .layerBox').fadeIn();
         return false;
     });
-    $('.feedback .btnBox').click( function(){
-        $('.feedback').fadeOut();
-        $('.success').fadeIn();
-        return false;
-    });
+    // $('.feedback .btnBox').click( function(){
+    //     $('.feedback').fadeOut();
+    //     $('.success').fadeIn();
+    //     return false;
+    // });
 
     // popup close
     $('.layerBox, .success .btnBox, .close_bth').click( function(){
@@ -120,6 +120,21 @@ $('.price__menu--item').click(function(e) {
     e.preventDefault();
     $('.price__menu--item').removeClass('active');
     $(this).addClass('active');
+    var priceHeight = $('.price__menu--item.active .price__submenu').height();
+    var priceHeightPlus = priceHeight + 50 + 'px';
+    var priceMinHeight = $('.price__menu').height();
+
+    $(".price").css({'height' : priceHeightPlus});
+    $(".price").css({'min-height' : priceMinHeight});
+});
+
+$(function() {
+    var priceHeight = $('.price__menu--item.active .price__submenu').height();
+    var priceHeightPlus = priceHeight + 50 + 'px';
+    var priceMinHeight = $('.price__menu').height();
+
+    $(".price").css({'height' : priceHeightPlus});
+    $(".price").css({'min-height' : priceMinHeight});
 });
 
 
@@ -131,6 +146,13 @@ $(function() {
             max_col_height = $(this).height();
         }
     });
-    console.log(max_col_height);
-    $(".price__menu").css({'min-height' : max_col_height});
 });
+
+
+//animated
+$(".informblocks__item").animated("fadeInUp", "fadeInUp");
+$(".numbers__item").animated("flipInX", "fadeOut");
+$(".teeth__item").animated("zoomIn", "fadeOut");
+$(".personal-sec__item").animated("fadeInUp", "fadeInUp");
+$(".salenews__item").animated("flipInX", "fadeOut");
+$(".news__item").animated("zoomIn", "fadeOut");

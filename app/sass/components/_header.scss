@@ -378,7 +378,7 @@ li.disabled a {
 }
 .search__input {
     width: 200px;
-    padding: 0 35px 0 5px;
+    padding: 2px 35px 2px 5px;
     color: #5f5f5f;
     border: 5px solid #106634;
     outline: none;
@@ -505,18 +505,18 @@ li.disabled a {
             &:before {
                 transition: .5s;
                 transition: .5s;
-                border-top: 6px solid #2fc758;
-                border-bottom: 6px solid #2fc758;
+                border-top: 4px solid #2fc758;
+                border-bottom: 4px solid #2fc758;
             }
         }
     }
     #hmenu #menu-button::after {
         position: absolute;
-        top: 15px;
+        top: 17px;
         right: 100px;
         display: block;
-        width: 70px;
-        height: 6px;
+        width: 50px;
+        height: 4px;
         content: '';
         transition: .5s;
         background: #28af45;
@@ -526,12 +526,12 @@ li.disabled a {
         top: 30px;
         right: 100px;
         display: block;
-        width: 70px;
-        height: 20px;
+        width: 50px;
+        height: 16px;
         content: '';
         transition: .5s;
-        border-top: 6px solid #28af45;
-        border-bottom: 6px solid #28af45;
+        border-top: 4px solid #28af45;
+        border-bottom: 4px solid #28af45;
     }
     #hmenu .submenu-button {
         position: absolute;
